@@ -128,3 +128,49 @@ header {
         }
     }
 }
+
+footer {
+    padding: 10px 10px;
+    margin: 20px 10px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    > * {
+        margin: 0px 20px;
+    }
+
+    div .footer-wid-title {
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    .footer-about-us {
+        width: 20vw;
+        display: inline-block;
+        vertical-align: top;
+        p {
+            text-align: justify;
+        }
+    }
+
+    .footer-menu {
+        width: 20vw;
+        display: inline-block;
+        vertical-align: top;
+        ul {
+            padding-left: 0px;
+            list-style: none;
+            li {
+                margin-bottom: 7px;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .footer-newsletter {
+        width: 20vw;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
