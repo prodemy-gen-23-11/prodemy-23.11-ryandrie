@@ -12,12 +12,13 @@ header {
     align-items: center;
 
     .header-logo {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
         margin: 0px 10px;
-        img {
-            height: 40px;
-        }
     }
     .header-links {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
         a {
             font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
                 sans-serif;
@@ -43,6 +44,30 @@ header {
             border-radius: 50%;
             margin-right: 10px;
         }
+    }
+}
+
+.navbar-responsive {
+    background-color: white;
+    padding: 10px 10px;
+    margin: 20px 10px;
+    border-radius: 15px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+        margin: 5px 0px !important;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: black;
+        text-decoration: none;
+        margin: 0px 20px;
+        transition: padding 1s, background-color 1s;
+    }
+
+    hr {
+        width: 90%;
+        border-width: 0.5px;
     }
 }
 
@@ -72,6 +97,7 @@ header {
 
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             .header-title {
                 font-family: "Gill Sans", "Gill Sans MT", Calibri,
@@ -110,6 +136,7 @@ header {
                 width: 250px;
                 height: 400px;
                 display: inline-block;
+                text-align: center;
                 padding: 10px 20px;
                 margin: 20px;
                 border: 0.5px solid;
@@ -142,7 +169,7 @@ header {
             }
 
             .product-item:hover {
-                background-color: rgba(220, 220, 220, 0.7);
+                background-color: rgba(220, 220, 220, 0.4);
                 cursor: pointer;
                 transform: translate(0px, -10px);
             }
@@ -152,7 +179,7 @@ header {
 
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     text-align: center;
     padding: 30px 30px;
@@ -188,5 +215,34 @@ footer {
     }
 
     .footer-newsletter {
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .header-links {
+        font-size: 0.8em;
+    }
+    .header-profile {
+        span {
+            font-size: 0.8em;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .header-links {
+        display: none !important;
+    }
+    .navbar-responsive {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .product-item {
+        height: min-content !important;
+        img {
+            max-width: 100%;
+        }
     }
 }
