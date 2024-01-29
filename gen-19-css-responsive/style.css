@@ -1,5 +1,5 @@
 body {
-    background-color: gainsboro;
+    background-color: #dcdcdc;
 }
 header {
     background-color: white;
@@ -169,7 +169,7 @@ header {
             }
 
             .product-item:hover {
-                background-color: rgba(220, 220, 220, 0.4);
+                background-color: #dcdcdc66;
                 cursor: pointer;
                 transform: translate(0px, -10px);
             }

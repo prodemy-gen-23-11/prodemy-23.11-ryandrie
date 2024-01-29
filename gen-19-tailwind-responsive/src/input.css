@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navlink-hover {
+        @apply hover:bg-gainsboro hover:rounded-md hover:px-1 transition-all duration-1000;
+    }
+    .product-hover {
+        @apply hover:cursor-pointer hover:bg-[#dcdcdc66] hover:-translate-y-2 transition-all duration-500 ease-out;
+    }
+}
