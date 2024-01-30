@@ -897,10 +897,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pb-5{
-  padding-bottom: 1.25rem;
-}
-
 .pr-2{
   padding-right: 0.5rem;
 }
@@ -950,6 +946,11 @@ video {
 
 .text-xl{
   font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
@@ -1050,6 +1051,11 @@ video {
 
   .md\:w-\[80\%\]{
     width: 80%;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
