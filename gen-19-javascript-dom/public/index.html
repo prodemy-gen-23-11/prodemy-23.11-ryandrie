@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./output.css" rel="stylesheet" />
+    </head>
+    <body class="bg-gainsboro text-sm md:text-base">
+        <header
+            class="bg-white m-5 p-5 rounded-2xl flex justify-between items-center h-14"
+        >
+            <div class="mx-2 font-impact">Ustora</div>
+            <div
+                class="justify-around gap-8 font-franklin text-sm lg:text-base hidden md:flex"
+            >
+                <a class="navlink-hover" href="">Home</a>
+                <a class="navlink-hover" href="">Shop Page</a>
+                <a class="navlink-hover" href="">Single Product</a>
+                <a class="navlink-hover" href="">Cart</a>
+                <a class="navlink-hover" href="">Checkout</a>
+                <a class="navlink-hover" href="">Others</a>
+            </div>
+
+            <div class="mx-2 items-center hidden md:flex">
+                <img
+                    class="w-7 rounded-full"
+                    src="https://www.w3schools.com/howto/img_avatar.png"
+                    alt="Profile Image"
+                />
+                <span class="ml-2 text-sm">Ryandrie Satria</span>
+            </div>
+
+            <div class="hamburger-menu md:hidden">
+                <div class="hamburger-menu-icon pr-2" tabindex="0">
+                    <label for="nav-check">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-7 h-7 stroke-2 hover:cursor-pointer"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                            />
+                        </svg>
+                    </label>
+                </div>
+                <input type="checkbox" class="hidden peer" id="nav-check" />
+                <div
+                    class="hamburger-menu-list flex flex-col justify-evenly bg-white m-5 rounded-2xl fixed right-0.5 top-16 shadow-xl w-3/4 z-50 h-0 overflow-hidden peer-checked:h-[350px] transition-all duration-500"
+                >
+                    <div class="mx-2 px-3 items-center flex">
+                        <img
+                            class="w-7 rounded-full"
+                            src="https://www.w3schools.com/howto/img_avatar.png"
+                            alt="Profile Image"
+                        />
+                        <span class="ml-2 text-sm">Ryandrie Satria</span>
+                    </div>
+                    <div
+                        class="justify-around font-franklin text-base flex flex-col px-5"
+                    >
+                        <a href="./asdads">Home</a>
+                        <hr class="my-2 border-black" />
+                        <a href="">Shop Page</a>
+                        <hr class="my-2 border-black" />
+                        <a href="">Single Product</a>
+                        <hr class="my-2 border-black" />
+                        <a href="">Cart</a>
+                        <hr class="my-2 border-black" />
+                        <a href="">Checkout</a>
+                        <hr class="my-2 border-black" />
+                        <a href="">Others</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main
+            class="bg-white m-5 p-5 rounded-2xl flex flex-wrap justify-evenly gap-2"
+        >
+            <div
+                class="image-preview w-auto md:w-[80%] lg:w-[40%] flex flex-col items-center"
+            >
+                <div
+                    class="image-preview-main border rounded-2xl border-black shadow-md w-full"
+                >
+                    <img
+                        id="imagePreview"
+                        class="w-[80%] p-4 mx-auto"
+                        src="https://img.lazcdn.com/g/p/f2de065c1599219f3f6c4bdf8a146a98.jpg_720x720q80.jpg_.webp"
+                        alt="Preview"
+                    />
+                </div>
+                <div class="image-preview-list flex my-4 gap-x-4 w-auto">
+                    <div
+                        onclick="changeImage(this)"
+                        class="image-preview-option-selected"
+                    >
+                        <img
+                            class="p-1 mx-auto mix-blend-multiply"
+                            src="https://img.lazcdn.com/g/p/f2de065c1599219f3f6c4bdf8a146a98.jpg_720x720q80.jpg_.webp"
+                            alt=""
+                        />
+                    </div>
+                    <div
+                        onclick="changeImage(this)"
+                        class="image-preview-option"
+                    >
+                        <img
+                            class="p-1 mx-auto mix-blend-multiply"
+                            src="https://img.lazcdn.com/g/p/90e4b53d8bf7c98c77b7164e9b5ccec0.jpg_720x720q80.jpg_.webp"
+                            alt=""
+                        />
+                    </div>
+                    <div
+                        onclick="changeImage(this)"
+                        class="image-preview-option"
+                    >
+                        <img
+                            class="p-1 mx-auto mix-blend-multiply"
+                            src="https://img.lazcdn.com/g/p/0ceb2b426ccfab20e29f264b952e7307.jpg_720x720q80.jpg_.webp"
+                            alt=""
+                        />
+                    </div>
+                    <div
+                        onclick="changeImage(this)"
+                        class="image-preview-option"
+                    >
+                        <img
+                            class="p-1 mx-auto mix-blend-multiply"
+                            src="https://img.lazcdn.com/g/p/b229ac0506701022c6964e814eaa307b.jpg_720x720q80.jpg_.webp"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="product-details w-full lg:w-1/2 mx-10">
+                <h2 class="product-title font-mono font-bold text-2xl">
+                    Skechers Microspec Plus Girl's Shoes - Black
+                </h2>
+                <p class="product-price font-couriernew font-bold text-2xl">
+                    Rp.459.000
+                </p>
+                <div class="product-details-specific my-4 font-poppins">
+                    <p>Gore And Strap Sneaker with 3D Printed Details</p>
+                    <hr class="my-4 border-black" />
+                    <p class="font-bold">Size Disclaimer:</p>
+                    <p>
+                        There may be a 1-2cm difference in measurements
+                        depending on the development and manufacturing process.
+                    </p>
+                    <br />
+                    <p class="font-bold">Color Disclaimer:</p>
+                    <p>
+                        Actual colors may vary. This is due to the fact that
+                        every computer monitor has a different capability to
+                        display colors, we cannot guarantee that the color you
+                        see accurately portrays the true color of the product.
+                    </p>
+                    <hr class="my-4 border-black" />
+                    <p class="font-bold">Size</p>
+                    <div class="product-details-size-button flex gap-3">
+                        <button
+                            class="btn-size-option-selected"
+                            onclick="changeSelectedSize(event)"
+                        >
+                            39
+                        </button>
+                        <button
+                            class="btn-size-option"
+                            onclick="changeSelectedSize(event)"
+                        >
+                            40
+                        </button>
+                        <button
+                            class="btn-size-option"
+                            onclick="changeSelectedSize(event)"
+                        >
+                            41
+                        </button>
+                        <button
+                            class="btn-size-option"
+                            onclick="changeSelectedSize(event)"
+                        >
+                            42
+                        </button>
+                        <button
+                            class="btn-size-option"
+                            onclick="changeSelectedSize(event)"
+                        >
+                            43
+                        </button>
+                        <button
+                            class="btn-size-option"
+                            onclick="changeSelectedSize(event)"
+                        >
+                            44
+                        </button>
+                    </div>
+                    <br />
+                    <div class="flex items-center flex-wrap gap-4">
+                        <div
+                            class="rounded-full w-16 h-10 px-20 py-2 border border-black relative"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="stroke-1 w-8 h-8 absolute left-4 inset-y-0.5 md:inset-y-1 hover:cursor-pointer"
+                                id="removeQuantity"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                                />
+                            </svg>
+
+                            <div
+                                id="quantityValue"
+                                class="absolute w-2 right-1/2 text-center select-none"
+                            >
+                                1
+                            </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="stroke-1 w-8 h-8 absolute right-4 inset-y-0.5 md:inset-y-1 hover:cursor-pointer"
+                                id="addQuantity"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                                />
+                            </svg>
+                        </div>
+                        <button
+                            class="rounded-full select-none bg-black text-white px-10 py-2 hover:bg-slate-50 hover:text-black hover:border-black hover:border hover:scale-105 transition-all duration-500"
+                        >
+                            ADD TO CART
+                        </button>
+                    </div>
+                    <hr class="my-4 border-black" />
+                    <p>SKU : 7920366689_ID-14336126537</p>
+                    <p>Brand : Skechers</p>
+                </div>
+            </div>
+        </main>
+        <section class="bg-white m-5 p-5 rounded-2xl">
+            <h2
+                class="text-center font-franklin text-xl tracking-widest mb-7 underline"
+            >
+                Related Products
+            </h2>
+            <div
+                class="product-related flex justify-between xl:justify-evenly gap-8 p-5 overflow-x-scroll xl:overflow-x-visible"
+            >
+                <div
+                    class="product-related-card w-[250px] border border-black rounded-3xl shadow-md shrink-0 product-hover"
+                >
+                    <img
+                        class="w-[90%] mx-auto p-2 m-2 mix-blend-multiply"
+                        src="https://down-id.img.susercontent.com/file/sg-11134201-7r98o-lkuugh96hf3682"
+                        alt=""
+                    />
+                    <p class="text-center font-mono mx-5">
+                        Skechers Graceful Women's Sneaker - Black
+                    </p>
+                    <p class="text-center font-couriernew font-bold p-2">
+                        Rp.599.000
+                    </p>
+                </div>
+                <div
+                    class="product-related-card w-[250px] border border-black rounded-3xl shadow-md shrink-0 product-hover"
+                >
+                    <img
+                        class="w-[90%] mx-auto p-2 m-2 mix-blend-multiply"
+                        src="https://down-id.img.susercontent.com/file/sg-11134201-7rbmw-llnfbbkfipin11"
+                        alt=""
+                    />
+                    <p class="text-center font-mono mx-5">
+                        Skechers Go Walk Joy Women's Sneaker - Black
+                    </p>
+                    <p class="text-center font-couriernew font-bold p-2">
+                        Rp.699.000
+                    </p>
+                </div>
+                <div
+                    class="product-related-card w-[250px] border border-black rounded-3xl shadow-md shrink-0 product-hover"
+                >
+                    <img
+                        class="w-[90%] mx-auto p-2 m-2 mix-blend-multiply"
+                        src="https://down-id.img.susercontent.com/file/sg-11134201-7qvff-ljwdeq020vva43"
+                        alt=""
+                    />
+                    <p class="text-center font-mono mx-5">
+                        Skechers Graceful Women's Sneaker - Mauve
+                    </p>
+                    <p class="text-center font-couriernew font-bold p-2">
+                        Rp.599.000
+                    </p>
+                </div>
+                <div
+                    class="product-related-card w-[250px] border border-black rounded-3xl shadow-md shrink-0 product-hover"
+                >
+                    <img
+                        class="w-[90%] mx-auto p-2 m-2 mix-blend-multiply"
+                        src="https://down-id.img.susercontent.com/file/sg-11134201-23030-gl3h6ldpf8nv85"
+                        alt=""
+                    />
+                    <p class="text-center font-mono mx-5">
+                        Skechers Summits Women's Sneakers - White
+                    </p>
+                    <p class="text-center font-couriernew font-bold p-2">
+                        Rp.599.000
+                    </p>
+                </div>
+            </div>
+        </section>
+        <footer
+            class="bg-white m-5 p-5 rounded-2xl font-poppins flex flex-wrap justify-evenly gap-4"
+        >
+            <div class="footer-about-us w-[300px]">
+                <h2
+                    class="footer-wid-title font-impact text-xl text-center mb-4"
+                >
+                    Ustora
+                </h2>
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Perferendis sunt id doloribus vero quam laborum quas alias
+                    dolores blanditiis iusto consequatur, modi aliquid eveniet
+                    eligendi iure eaque ipsam iste, pariatur omnis sint!
+                    Suscipit, debitis, quisquam. Laborum commodi veritatis magni
+                    at?
+                </p>
+            </div>
+            <div class="footer-menu w-[300px]">
+                <h2 class="footer-wid-title font-bold text-xl text-center mb-4">
+                    User Navigation
+                </h2>
+                <ul class="underline text-center flex flex-col gap-2">
+                    <li><a href="#">My account</a></li>
+                    <li><a href="#">Order history</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Vendor contact</a></li>
+                    <li><a href="#">Front page</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu w-[300px]">
+                <h2 class="footer-wid-title font-bold text-xl text-center mb-4">
+                    Categories
+                </h2>
+                <ul class="underline text-center flex flex-col gap-2">
+                    <li><a href="#">Footwear</a></li>
+                    <li><a href="#">Pants</a></li>
+                    <li><a href="#">Jacket</a></li>
+                    <li><a href="#">Sweatshirts</a></li>
+                    <li><a href="#">Tops & Blouses</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter w-[300px]">
+                <h2 class="footer-wid-title font-bold text-xl text-center mb-4">
+                    Newsletter
+                </h2>
+                <p class="text-justify mb-2">
+                    Sign up to our newsletter and get exclusive deals you wont
+                    find anywhere else straight to your inbox!
+                </p>
+                <div class="newsletter-form">
+                    <form action="#" class="text-center">
+                        <input
+                            class="border border-black p-2 rounded-md text-sm"
+                            type="email"
+                            placeholder="Type your email"
+                        />
+                        <input
+                            class="bg-gainsboro p-2 rounded-md border border-black text-sm"
+                            type="submit"
+                            value="Subscribe"
+                        />
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
