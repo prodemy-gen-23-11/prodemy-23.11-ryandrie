@@ -13,7 +13,7 @@ function changeSelectedSize(evt) {
     document.querySelector(".btn-size-option-selected").className =
         "btn-size-option";
 
-    event.srcElement.className = "btn-size-option-selected";
+    // event.srcElement.className = "btn-size-option-selected";
     evt.currentTarget.className = "btn-size-option-selected";
 }
 
