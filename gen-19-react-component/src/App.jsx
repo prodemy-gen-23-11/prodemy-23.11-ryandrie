@@ -4,7 +4,7 @@ import shoes from "./assets/Shoes";
 function App() {
     return (
         <main className='bg-white m-5 p-5 rounded-2xl'>
-            <Header />
+            <ProductHeader />
 
             <hr className='mx-2 mb-6 border-gainsboro' />
 
@@ -17,7 +17,7 @@ function App() {
     );
 }
 
-function Header() {
+function ProductHeader() {
     return (
         <div className='product-header p-3 flex justify-between items-center flex-wrap'>
             <span className='header-title font-semibold'>Products</span>
