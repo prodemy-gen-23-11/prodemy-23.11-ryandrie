@@ -8,12 +8,7 @@ function Header() {
                 <a className='navlink-hover' href=''>
                     Home
                 </a>
-                <a className='navlink-hover' href=''>
-                    Shop Page
-                </a>
-                <a className='navlink-hover' href=''>
-                    Single Product
-                </a>
+
                 <a className='navlink-hover' href=''>
                     Cart
                 </a>
@@ -21,7 +16,7 @@ function Header() {
                     Checkout
                 </a>
                 <a className='navlink-hover' href=''>
-                    Others
+                    About
                 </a>
             </div>
 
@@ -66,15 +61,11 @@ function Header() {
                     <div className='justify-around font-franklin text-base flex flex-col px-5'>
                         <a href='./asdads'>Home</a>
                         <hr className='my-2 border-black' />
-                        <a href=''>Shop Page</a>
-                        <hr className='my-2 border-black' />
-                        <a href=''>Single Product</a>
-                        <hr className='my-2 border-black' />
                         <a href=''>Cart</a>
                         <hr className='my-2 border-black' />
                         <a href=''>Checkout</a>
                         <hr className='my-2 border-black' />
-                        <a href=''>Others</a>
+                        <a href=''>About</a>
                     </div>
                 </div>
             </div>

@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import Layout from "../layout/Layout";
 import shoes from "../data/Shoes";
 import Card from "../components/Card";
+import _ from "lodash";
 
 function ProductDetail() {
-    const product = shoes[0];
+    const product = shoes[7];
     const sizes = [39, 40, 41, 42, 43, 44];
+    let relatedProducts = _.sampleSize(
+        shoes.filter((item) => item.id !== product.id),
+        4
+    );
 
     const [mainImage, setMainImage] = useState(product.imageUrl[0]);
     const [size, setSize] = useState(39);
@@ -164,8 +169,8 @@ function ProductDetail() {
                     Related Products
                 </h2>
                 <div className='product-related flex justify-between xl:justify-evenly gap-8 p-5 overflow-x-scroll xl:overflow-x-visible'>
-                    {shoes.slice(0, 4).map((item, index) => (
-                        <Card data={item} />
+                    {relatedProducts.map((item) => (
+                        <Card data={item} key={item.id} />
                     ))}
                 </div>
             </section>
