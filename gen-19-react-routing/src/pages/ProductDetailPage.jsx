@@ -21,12 +21,18 @@ function ProductDetail() {
         )
     );
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    //     setMainImage(product.imageUrl[0]);
-    //     setSize(39);
-    //     setQuantity(1);
-    // }, [product]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setMainImage(product.imageUrl[0]);
+        setSize(39);
+        setQuantity(1);
+        setRelated(
+            _.sampleSize(
+                shoes.filter((item) => item.id !== product.id),
+                4
+            )
+        );
+    }, [product]);
 
     function handleMainImage(url) {
         setMainImage(url);

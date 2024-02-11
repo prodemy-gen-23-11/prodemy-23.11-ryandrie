@@ -51,13 +51,13 @@ function LandingPage() {
                             <div className='flex gap-4'>
                                 <input
                                     placeholder='Search Product ...'
-                                    className='search-bar border bg-gainsboro-50 rounded-xl px-2 pl-4 text-sm'
+                                    className='search-bar border-blue-700 border bg-gainsboro-50 rounded-xl px-2 pl-4 text-sm font-mono focus:ring-2 focus:outline-none focus:ring-blue-300'
                                     onChange={(event) => {
                                         handleInputChange(event);
                                     }}
                                 />
                                 <input
-                                    className='px-4 py-2 bg-gainsboro/20 rounded-xl border text-sm'
+                                    className='text-blue-700 hover:text-white border border-blue-700 hover:cursor-pointer hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center '
                                     type='submit'
                                     value='Search'
                                 />
@@ -69,9 +69,13 @@ function LandingPage() {
                 <hr className='mx-2 mb-6 border-gainsboro' />
 
                 <div className='flex justify-evenly flex-wrap gap-6'>
-                    {products.map((item) => {
-                        return <Card data={item} key={item.id} />;
-                    })}
+                    {products.length > 0 ? (
+                        products.map((item) => {
+                            return <Card data={item} key={item.id} />;
+                        })
+                    ) : (
+                        <div>Pencarian tidak ditemukan.</div>
+                    )}
                 </div>
             </main>
         </Layout>
