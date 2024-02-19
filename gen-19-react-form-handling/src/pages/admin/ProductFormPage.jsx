@@ -1,10 +1,9 @@
 import axios from "axios";
 import Layout from "../../layout/Layout";
-import { useForm, useWatch } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import useSWR from "swr";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useEffect, useState } from "react";
 import FormInput from "../../components/FormInput";
 
 function ProductFormPage() {
