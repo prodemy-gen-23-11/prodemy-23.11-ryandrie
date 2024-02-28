@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 function Navlink({ page }) {
     const [toggle, setToggle] = useState(false);
-    const { dataCart } = useSelector((state) => state.cart);
+    const { dataCart: cart } = useSelector((state) => state.cart);
 
     return (
         <div className='justify-around gap-8 font-franklin text-sm lg:text-base hidden md:flex'>
@@ -31,10 +31,10 @@ function Navlink({ page }) {
                         <div onMouseEnter={() => setToggle(true)}>
                             <div className='navlink-hover relative' href=''>
                                 Cart
-                                {dataCart.length > 0 && (
+                                {cart.length > 0 && (
                                     <span className='absolute -right-3.5 -top-1 bg-red-500 rounded-full text-sm text-white opacity-90'>
                                         <div className='flex items-center justify-center w-4 h-4'>
-                                            {dataCart.length}
+                                            {cart.length}
                                         </div>
                                     </span>
                                 )}
@@ -56,8 +56,8 @@ function Navlink({ page }) {
                             </h3>
                         </div>
                         <div className='px-5 pt-6 pb-4 flex flex-col gap-4 h-max-80 overflow-auto'>
-                            {dataCart.length > 0 ? (
-                                dataCart.map((item, index) => (
+                            {cart.length > 0 ? (
+                                cart.map((item, index) => (
                                     <div
                                         className='flex gap-4 justify-between'
                                         key={index}
