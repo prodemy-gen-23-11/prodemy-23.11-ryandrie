@@ -3,7 +3,7 @@ import {
     EMPTY_CART,
     REMOVE_FROM_CART,
     SET_QUANTITY,
-    // GET_TOTAL_PRICE,
+    GET_TOTAL_PRICE,
 } from "../types";
 
 export const addItemToCart = (payload) => ({
@@ -25,6 +25,6 @@ export const setItemQuantity = (payload) => ({
     payload,
 });
 
-// export const getTotalPrice = () => ({
-//     type: GET_TOTAL_PRICE,
-// });
+export const getTotalPrice = () => ({
+    type: GET_TOTAL_PRICE,
+});

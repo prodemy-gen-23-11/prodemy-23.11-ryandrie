@@ -3,11 +3,12 @@ import {
     EMPTY_CART,
     REMOVE_FROM_CART,
     SET_QUANTITY,
-    // GET_TOTAL_PRICE,
+    GET_TOTAL_PRICE,
 } from "../types";
 
 const initialState = {
     dataCart: [],
+    totalPrice: 0,
 };
 let newCart = [];
 const cartReducer = (state = initialState, action) => {
@@ -69,12 +70,14 @@ const cartReducer = (state = initialState, action) => {
 
             return { ...state, dataCart: newCart };
 
-        // case GET_TOTAL_PRICE:
-        //     return state.dataCart.length > 0
-        //         ? state.dataCart.reduce((total, item) => {
-        //               return (total += item.price * item.quantity);
-        //           }, 0)
-        //         : 0;
+        case GET_TOTAL_PRICE:
+            let total =
+                state.dataCart.length > 0
+                    ? state.dataCart.reduce((total, item) => {
+                          return (total += item.price * item.quantity);
+                      }, 0)
+                    : 0;
+            return { ...state, totalPrice: total };
         default:
             return state;
     }

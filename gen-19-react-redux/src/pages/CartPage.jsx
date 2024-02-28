@@ -8,11 +8,17 @@ import {
     emptyCart,
     removeItemFromCart,
     setItemQuantity,
+    getTotalPrice,
 } from "../store/actions/cartAction";
+import { useEffect } from "react";
 
 function CartPage() {
     const dispatch = useDispatch();
-    const { dataCart: cart } = useSelector((state) => state.cart);
+    const { dataCart: cart, totalPrice } = useSelector((state) => state.cart);
+
+    useEffect(() => {
+        dispatch(getTotalPrice());
+    }, [cart]);
 
     function handleClickDiscard(product) {
         Swal.fire({
@@ -58,14 +64,6 @@ function CartPage() {
         });
     }
 
-    function getTotalPrice() {
-        return cart.length > 0
-            ? cart.reduce((total, item) => {
-                  return (total += item.price * item.quantity);
-              }, 0)
-            : 0;
-    }
-
     return (
         <Layout>
             <main className='bg-white m-5 p-5 rounded-2xl'>
@@ -107,7 +105,7 @@ function CartPage() {
                     </div>
                     <div className=' text-lg font-semibold flex justify-center items-center'>
                         {/* {toRupiah(dispatch(getTotalPrice()))} */}
-                        {toRupiah(getTotalPrice())}
+                        {toRupiah(totalPrice)}
                     </div>
                     <div className='flex justify-center items-center'>
                         <div className='border rounded-xl w-4/5 py-2 bg-blue-500 text-white hover:cursor-pointer hover:bg-blue-600'>
