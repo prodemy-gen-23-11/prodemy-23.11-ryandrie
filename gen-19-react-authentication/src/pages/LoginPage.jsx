@@ -35,9 +35,11 @@ export default function LoginPage() {
                 dispatch(setToken(accessToken));
                 dispatch(setUser(user));
 
-                user.role === "ADMIN" && navigate("/admin/dashboard");
-
-                user.role === "CUSTOMER" && navigate("/");
+                if (user.role === "ADMIN") {
+                    navigate("/admin/dashboard");
+                } else {
+                    user.role === "CUSTOMER" && navigate("/");
+                }
             })
             .catch((err) => {
                 alert("Terjadi kesalahan");

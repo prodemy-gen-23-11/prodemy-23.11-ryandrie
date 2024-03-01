@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Navlink from "./Navlink";
 import { useDispatch, useSelector } from "react-redux";
 import { resetAuthData } from "../store/reducers/authSlice.js";
 
 function Header({ page }) {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const isLogin = useSelector((state) => state.auth.token !== "");
 
