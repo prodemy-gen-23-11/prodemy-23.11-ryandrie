@@ -25,7 +25,9 @@ function LandingPage() {
     );
 
     const { data: searchedProducts } = useSWR(
-        `http://localhost:3000/shoes?name_like=${query}`,
+        query !== null
+            ? `http://localhost:3000/shoes?name_like=${query}`
+            : null,
         fetcher
     );
 

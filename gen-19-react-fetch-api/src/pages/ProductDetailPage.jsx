@@ -15,11 +15,6 @@ function ProductDetail() {
     // const [product, setProduct] = useState({});
     // const [loading, setLoading] = useState(true);
 
-    const [related, setRelated] = useState([]);
-    const [mainImage, setMainImage] = useState();
-    const [size, setSize] = useState(39);
-    const [quantity, setQuantity] = useState(1);
-
     const fetcher = (url) =>
         axios.get(url).then((res) => {
             return res.data;
@@ -31,6 +26,11 @@ function ProductDetail() {
     );
 
     const { data: products } = useSWR(`http://localhost:3000/shoes/`, fetcher);
+
+    const [related, setRelated] = useState([]);
+    const [mainImage, setMainImage] = useState(product?.imageUrl[0]);
+    const [size, setSize] = useState(39);
+    const [quantity, setQuantity] = useState(1);
 
     useEffect(() => {
         setRelated(

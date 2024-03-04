@@ -38,7 +38,7 @@ export default function LoginPage() {
                 if (user.role === "ADMIN") {
                     navigate("/admin/dashboard");
                 } else {
-                    user.role === "CUSTOMER" && navigate("/");
+                    navigate("/");
                 }
             })
             .catch((err) => {

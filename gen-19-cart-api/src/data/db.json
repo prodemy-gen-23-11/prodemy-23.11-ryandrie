@@ -143,28 +143,20 @@
     {
       "itemList": [
         {
-          "productId": 3,
+          "productId": 2,
           "size": 39,
-          "name": "Skechers Go Walk Joy Women's Sneaker - Black",
-          "price": 699000,
-          "imageUrl": "https://down-id.img.susercontent.com/file/sg-11134201-7rbmw-llnfbbkfipin11",
-          "quantity": 4
-        },
-        {
-          "productId": 3,
-          "size": 40,
-          "name": "Skechers Go Walk Joy Women's Sneaker - Black",
-          "price": 699000,
-          "imageUrl": "https://down-id.img.susercontent.com/file/sg-11134201-7rbmw-llnfbbkfipin11",
-          "quantity": 2
-        },
-        {
-          "productId": 6,
-          "size": 39,
-          "name": "Skechers Bountiful Women's Sneaker - Burgundy",
+          "name": "Skechers Graceful Women's Sneaker - Black",
           "price": 599000,
-          "imageUrl": "https://down-id.img.susercontent.com/file/sg-11134201-7rbk3-llx18926u1n45b",
-          "quantity": 2
+          "imageUrl": "https://down-id.img.susercontent.com/file/sg-11134201-7r98o-lkuugh96hf3682",
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "size": 43,
+          "name": "Skechers Graceful Women's Sneaker - Black",
+          "price": 599000,
+          "imageUrl": "https://down-id.img.susercontent.com/file/sg-11134201-7r98o-lkuugh96hf3682",
+          "quantity": 1
         }
       ],
       "id": 1
