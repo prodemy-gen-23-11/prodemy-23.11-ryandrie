@@ -3,6 +3,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import Navlink from "./Navlink";
 import { useDispatch, useSelector } from "react-redux";
 import { resetAuthData } from "../store/reducers/authSlice.js";
+import { fetchCart } from "../store/reducers/cartSlice";
 
 function Header({ page }) {
     const dispatch = useDispatch();
@@ -14,6 +15,7 @@ function Header({ page }) {
 
     const handleLogout = () => {
         dispatch(resetAuthData());
+        dispatch(fetchCart(0));
         navigate("/");
     };
 
